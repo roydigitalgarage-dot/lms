@@ -1,7 +1,8 @@
 // Mock data service for static LMS
 export const mockData = {
   classes: [
-    { _id: 'class2', name: 'Class 2', level: 2, subjects: ['English', 'Math', 'EVS', 'Hindi', 'Telugu'] }
+    { _id: 'class2', name: 'Class 2', level: 2, subjects: ['English', 'Math', 'EVS', 'Hindi', 'Telugu'] },
+    { _id: 'class4', name: 'Class 4', level: 4, subjects: ['English', 'Math', 'Science', 'Social', 'Hindi', 'Telugu'] }
   ],
 
   lessons: [
@@ -24,6 +25,91 @@ export const mockData = {
 
     // English Lessons - Using actual video files
     { _id: 'eng1', title: 'Class 2 English Syllabus Overview', subject: 'English', class: 'class2', unit: 'Unit 1', content: 'Complete overview of Class 2 English syllabus with Mridang curriculum.', duration: '25 mins', videoUrl: '/videos/English/Class 2 English (Mridang) - Syllabus Overview.mp4' },
+
+    // Class 4 English - Unit 9
+    {
+      _id: 'eng9_class4',
+      title: 'The Sleeping Beauty',
+      subject: 'English',
+      class: 'class4',
+      unit: 'Unit 9',
+      content: `
+        <h2>👑 The Sleeping Beauty</h2>
+        <div class="mb-6">
+          <h3 class="text-xl font-bold mb-3">🖼️ Picture Reading</h3>
+          <p class="mb-4">Look at the following pictures. Can you identify them? Think and tell your teacher the same.</p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>An old King, An old Queen, A beautiful baby 👶</li>
+            <li>A Fairy 🧚‍♀️, Spindle, Young and beautiful Princess 👸</li>
+            <li>Staircase, Handsome Prince 🤴</li>
+            <li>Rusty Key 🗝️, Thorny Bushes 🌹</li>
+            <li>Magnificent Wedding 💒</li>
+          </ul>
+        </div>
+
+        <div class="space-y-8 my-8">
+          <div class="bg-blue-50 dark:bg-gray-700 p-4 rounded-xl">
+            <h3 class="text-xl font-bold mb-3">🎬 Part 1: The Curse</h3>
+            <video controls class="w-full rounded-lg shadow-lg" poster="/images/video-placeholder.jpg">
+              <source src="/videos/English/09aThe Sleeping Beauty.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <div class="bg-blue-50 dark:bg-gray-700 p-4 rounded-xl">
+            <h3 class="text-xl font-bold mb-3">🎬 Part 2: The Sleep</h3>
+            <video controls class="w-full rounded-lg shadow-lg" poster="/images/video-placeholder.jpg">
+              <source src="/videos/English/09bThe Sleeping Beauty.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <div class="bg-blue-50 dark:bg-gray-700 p-4 rounded-xl">
+            <h3 class="text-xl font-bold mb-3">🎬 Part 3: The Awakening</h3>
+            <video controls class="w-full rounded-lg shadow-lg" poster="/images/video-placeholder.jpg">
+              <source src="/videos/English/09cThe Sleeping Beauty.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <h2 class="text-2xl font-bold mb-4">✍️ Grammar: Adjectives of Quality</h2>
+          <p class="mb-4 text-lg"><strong>Adjectives</strong> that show the quality, kind or condition of a person or thing are called <span class="text-red-500 font-bold">Adjectives of Quality</span>. They are also called Descriptive Adjectives.</p>
+          
+          <div class="bg-yellow-50 dark:bg-gray-700 p-6 rounded-xl border border-yellow-200 dark:border-gray-600 mb-6">
+            <h3 class="text-xl font-bold mb-4 text-yellow-800 dark:text-yellow-300">🦁 Adjectives in the Animal World</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <p>• A <span class="text-red-500 font-bold">Lean</span> Hen 🐔</p>
+              <p>• A <span class="text-red-500 font-bold">Fat</span> Cat 🐱</p>
+              <p>• An <span class="text-red-500 font-bold">Old</span> Owl 🦉</p>
+              <p>• A <span class="text-red-500 font-bold">Young</span> Yak 🐂</p>
+              <p>• A <span class="text-red-500 font-bold">Tall</span> Giraffe 🦒</p>
+              <p>• A <span class="text-red-500 font-bold">White</span> Rabbit 🐇</p>
+              <p>• A <span class="text-red-500 font-bold">Pretty</span> Parrot 🦜</p>
+              <p>• An <span class="text-red-500 font-bold">Ugly</span> Eagle 🦅</p>
+              <p>• A <span class="text-red-500 font-bold">Small</span> Lion 🦁</p>
+              <p>• A <span class="text-red-500 font-bold">Clever</span> Fox 🦊</p>
+            </div>
+          </div>
+
+          <div class="bg-green-50 dark:bg-gray-700 p-6 rounded-xl border border-green-200 dark:border-gray-600">
+            <h3 class="text-xl font-bold mb-4 text-green-800 dark:text-green-300">📝 More Examples</h3>
+            <ul class="space-y-3">
+              <li>• Mumbai is a <span class="text-red-500 font-bold">large</span> city.</li>
+              <li>• I ate some <span class="text-red-500 font-bold">ripe</span> mangoes and <span class="text-red-500 font-bold">seedless</span> grapes.</li>
+              <li>• The child has a <span class="text-red-500 font-bold">smiling</span> face.</li>
+              <li>• They lived in a <span class="text-red-500 font-bold">big red</span> house.</li>
+              <li>• Mr. Ramesh is a <span class="text-red-500 font-bold">kind</span> man.</li>
+              <li>• The camel is a very <span class="text-red-500 font-bold">useful</span> animal.</li>
+              <li>• The dog is a <span class="text-red-500 font-bold">faithful</span> one.</li>
+            </ul>
+          </div>
+        </div>
+      `,
+      duration: '45 mins',
+      videoUrl: '' // Videos embedded in content
+    },
 
     // Mathematics Lessons - Using actual video files
     { _id: 'math1', title: 'Mathematics Fundamentals', subject: 'Mathematics', class: 'class2', unit: 'Unit 1', content: 'Basic mathematics concepts for Class 2 students.', duration: '20 mins', videoUrl: '/videos/Mathematics/videoplayback.mp4' },

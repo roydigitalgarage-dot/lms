@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Layout from '../layout/Layout';
 import { Play, FileText, ArrowLeft, CheckCircle } from 'lucide-react';
+import { mockData } from '../../services/mockData';
 
 export default function LessonPage() {
   const { courseId, unitId } = useParams();
@@ -20,63 +21,23 @@ export default function LessonPage() {
   const subject = subjectData[courseId as keyof typeof subjectData] || subjectData.english;
 
   const getVideoPath = (courseId: string, unitNumber: number) => {
-    // Get lesson from mock data based on courseId and unitNumber
-    const mockData = {
-      lessons: [
-        // Telugu videos
-        { subject: 'Telugu', unit: 'Unit 1', videoUrl: '/videos/Telugu/2nd class telugu Allo Neredallo అల్లో నేరెడల్లో _Bathukamma _telugu song _ Bathukamma song.mp4' },
-        { subject: 'Telugu', unit: 'Unit 2', videoUrl: '/videos/Telugu/2nd class telugu bathukamma adudham  బతుకమ్మ ఆడుదాం _ telugu Songs _  Bathukamma song _ Bathukamma.mp4' },
-        { subject: 'Telugu', unit: 'Unit 3', videoUrl: '/videos/Telugu/2nd class telugu Bathukamma perudham బతుకమ్మ పేరుద్దాం !_ Bathukamma _ bathukamma songs.mp4' },
-        { subject: 'Telugu', unit: 'Unit 4', videoUrl: '/videos/Telugu/2nd class telugu Erra dabbala bandi  ఎర్రా డబ్బల బండి _Bathukamma _ bathukamma song.mp4' },
-        { subject: 'Telugu', unit: 'Unit 5', videoUrl: '/videos/Telugu/2nd class telugu kalla gajja కాళ్ళ గజ్జా telugu rhymes.mp4' },
-        { subject: 'Telugu', unit: 'Unit 6', videoUrl: '/videos/Telugu/2nd class telugu Muthyla chmma chekka ముత్యాల చెమ్మ చెక్క  _ telugu rhymes.mp4' },
-        { subject: 'Telugu', unit: 'Unit 7', videoUrl: '/videos/Telugu/2nd class telugu O Lachha gummadi  ఓ లచ్చా గుమ్మడి _ Bathukamma _ Bathukamma song.mp4' },
-        { subject: 'Telugu', unit: 'Unit 8', videoUrl: '/videos/Telugu/2nd class telugu poyira gouramma  పోయిరా గౌరమ్మ  _ Bathukamma _ Bathukamma song.mp4' },
-        { subject: 'Telugu', unit: 'Unit 9', videoUrl: '/videos/Telugu/2nd class telugu Rangurangula pulu  రంగురంగుల పూలు _ bathukamma _ bathukamma song.mp4' },
-        
-        // Hindi videos
-        { subject: 'Hindi', unit: 'Unit 1', videoUrl: '/videos/Hindi/घर कविता कक्षा दो _ Ghar Kavita _ Class 2nd Poem Hindi _ New NCERT Hindi Book Poem With Music.mp4' },
-        { subject: 'Hindi', unit: 'Unit 2', videoUrl: '/videos/Hindi/चींटा चींटा _ Cheenta Cheenta Class 2 Poem_ Hindi Kavita New NCERT Hindi Book  #learnwithmusic.mp4' },
-        { subject: 'Hindi', unit: 'Unit 3', videoUrl: '/videos/Hindi/टिल्लू जी कविता _ Tillu Ji Hindi Poem Class 2 _ Chapter 7 _ New NCERT 2023 _#learnwithmusic __.mp4' },
-        { subject: 'Hindi', unit: 'Unit 4', videoUrl: '/videos/Hindi/माँ कविता कक्षा दो _ Maa Poem Hindi CLASS 2 _ NCERT NEW BOOK _ Maa Tum Kitni Bholi Bhali Hindi poem.mp4' },
-        
-        // English videos
-        { subject: 'English', unit: 'Unit 1', videoUrl: '/videos/English/Class 2 English (Mridang) - Syllabus Overview.mp4' },
-        
-        // Mathematics videos
-        { subject: 'Mathematics', unit: 'Unit 1', videoUrl: '/videos/Mathematics/videoplayback.mp4' },
-        
-        // Science videos
-        { subject: 'Science', unit: 'Unit 1', videoUrl: '/videos/Science/videoplayback.mp4' },
-        
-        // Social Studies videos
-        { subject: 'Social Studies', unit: 'Unit 1', videoUrl: '/videos/Social-Studies/videoplayback.mp4' },
-        
-        // EVS videos
-        { subject: 'EVS', unit: 'Unit 1', videoUrl: '/videos/EVS/videoplayback.mp4' },
-        { subject: 'EVS', unit: 'Unit 2', videoUrl: '/videos/2nd-unit.mp4' },
-        { subject: 'EVS', unit: 'Unit 3', videoUrl: '/videos/3rd unit.mp4' },
-        { subject: 'EVS', unit: 'Unit 4', videoUrl: '/videos/4th unit.mp4' }
-      ]
-    };
-    
     const subjectMap: { [key: string]: string } = {
       'telugu': 'Telugu',
-      'hindi': 'Hindi', 
+      'hindi': 'Hindi',
       'english': 'English',
       'maths': 'Mathematics',
       'science': 'Science',
       'social': 'Social Studies',
       'evs': 'EVS'
     };
-    
+
     const subjectName = subjectMap[courseId] || courseId;
     const unitName = `Unit ${unitNumber}`;
-    
-    const lesson = mockData.lessons.find(l => 
+
+    const lesson = mockData.lessons.find(l =>
       l.subject === subjectName && l.unit === unitName
     );
-    
+
     return lesson ? lesson.videoUrl : null;
   };
 
@@ -451,11 +412,27 @@ export default function LessonPage() {
     return evsContent[unitId as keyof typeof evsContent];
   };
 
+  const getCurrentLesson = () => {
+    const subjectMap: { [key: string]: string } = {
+      'telugu': 'Telugu',
+      'hindi': 'Hindi',
+      'english': 'English',
+      'maths': 'Mathematics',
+      'science': 'Science',
+      'social': 'Social Studies',
+      'evs': 'EVS'
+    };
+    const subjectName = subjectMap[courseId as string] || courseId;
+    return mockData.lessons.find(l => l.subject === subjectName && l.unit === `Unit ${unitNumber}`);
+  };
+
+  const currentLesson = getCurrentLesson();
+
   const lessonContent = {
-    title: `${subject.name} - ${unitTitle}`,
-    description: `Learn about ${unitTitle.toLowerCase()} through interactive content and engaging activities.`,
-    content: courseId === 'evs' && getEVSContent(unitNumber) ? 
-      getEVSContent(unitNumber)!.content : 
+    title: currentLesson?.title || `${subject.name} - ${unitTitle}`,
+    description: currentLesson?.title ? 'Explore the lesson content below.' : `Learn about ${unitTitle.toLowerCase()} through interactive content and engaging activities.`,
+    content: currentLesson?.content || (courseId === 'evs' && getEVSContent(unitNumber) ?
+      getEVSContent(unitNumber)!.content :
       `
         <h2>Welcome to ${unitTitle}</h2>
         <p>In this lesson, you will learn about ${unitTitle.toLowerCase()}. This lesson is designed to help you understand the fundamental principles through practical examples and interactive exercises.</p>
@@ -473,7 +450,7 @@ export default function LessonPage() {
         
         <h3>Additional Learning Resources</h3>
         <p>Complete the reading materials above, then enhance your understanding with the video lesson below.</p>
-      `
+      `)
   };
 
   return (
@@ -481,7 +458,7 @@ export default function LessonPage() {
       <div className="max-w-4xl mx-auto space-y-6">
         {/* Header */}
         <div className="flex items-center space-x-4 mb-6">
-          <Link 
+          <Link
             to={`/courses/${courseId}`}
             className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
           >
@@ -507,8 +484,8 @@ export default function LessonPage() {
         {showVideo && videoPath ? (
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
             <div className="bg-black aspect-video">
-              <video 
-                controls 
+              <video
+                controls
                 className="w-full h-full"
                 autoPlay
                 muted
@@ -537,7 +514,7 @@ export default function LessonPage() {
 
         {/* Lesson Content */}
         <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
-          <div 
+          <div
             className="prose dark:prose-invert max-w-none"
             dangerouslySetInnerHTML={{ __html: lessonContent.content }}
           />
@@ -564,7 +541,7 @@ export default function LessonPage() {
                 </div>
               </div>
             )}
-            
+
             {/* Complete Lesson Button */}
             <button className="flex items-center space-x-2 bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-6 rounded-lg transition-colors">
               <CheckCircle className="w-5 h-5" />
