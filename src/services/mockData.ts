@@ -34,76 +34,230 @@ export const mockData = {
       class: 'class4',
       unit: 'Unit 9',
       content: `
-        <h2>👑 The Sleeping Beauty</h2>
-        <div class="mb-6">
-          <h3 class="text-xl font-bold mb-3">🖼️ Picture Reading</h3>
-          <p class="mb-4">Look at the following pictures. Can you identify them? Think and tell your teacher the same.</p>
-          <ul class="list-disc pl-6 space-y-2">
-            <li>An old King, An old Queen, A beautiful baby 👶</li>
-            <li>A Fairy 🧚‍♀️, Spindle, Young and beautiful Princess 👸</li>
-            <li>Staircase, Handsome Prince 🤴</li>
-            <li>Rusty Key 🗝️, Thorny Bushes 🌹</li>
-            <li>Magnificent Wedding 💒</li>
-          </ul>
+        <h2 class="text-3xl font-bold mb-6">👑 The Sleeping Beauty</h2>
+        
+        <div class="mb-8 bg-purple-50 dark:bg-gray-800 p-6 rounded-xl">
+          <h3 class="text-2xl font-bold mb-4">🖼️ Picture Reading</h3>
+          <p class="mb-4 text-lg">Look at the following pictures. Can you identify them? Think and tell your teacher the same.</p>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+            <div class="bg-white dark:bg-gray-700 p-3 rounded-lg text-center">👑 An old King</div>
+            <div class="bg-white dark:bg-gray-700 p-3 rounded-lg text-center">👑 An old Queen</div>
+            <div class="bg-white dark:bg-gray-700 p-3 rounded-lg text-center">👶 A beautiful baby</div>
+            <div class="bg-white dark:bg-gray-700 p-3 rounded-lg text-center">🧚‍♀️ A Fairy</div>
+            <div class="bg-white dark:bg-gray-700 p-3 rounded-lg text-center">🧵 Spindle</div>
+            <div class="bg-white dark:bg-gray-700 p-3 rounded-lg text-center">👸 Princess</div>
+            <div class="bg-white dark:bg-gray-700 p-3 rounded-lg text-center">🏰 Staircase</div>
+            <div class="bg-white dark:bg-gray-700 p-3 rounded-lg text-center">🗝️ Rusty Key</div>
+            <div class="bg-white dark:bg-gray-700 p-3 rounded-lg text-center">🌹 Thorny Bushes</div>
+            <div class="bg-white dark:bg-gray-700 p-3 rounded-lg text-center">💒 Wedding</div>
+            <div class="bg-white dark:bg-gray-700 p-3 rounded-lg text-center">🤴 Prince</div>
+          </div>
         </div>
 
-        <div class="space-y-8 my-8">
-          <div class="bg-blue-50 dark:bg-gray-700 p-4 rounded-xl">
+        <div class="space-y-6 my-8">
+          <div class="bg-gradient-to-r from-blue-50 to-purple-50 dark:bg-gray-700 p-6 rounded-xl shadow-lg">
             <h3 class="text-xl font-bold mb-3">🎬 Part 1: The Curse</h3>
-            <video controls class="w-full rounded-lg shadow-lg" poster="/images/video-placeholder.jpg">
+            <video controls class="w-full rounded-lg shadow-lg bg-black">
               <source src="/videos/English/09aThe Sleeping Beauty.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
           </div>
 
-          <div class="bg-blue-50 dark:bg-gray-700 p-4 rounded-xl">
+          <div class="bg-gradient-to-r from-purple-50 to-pink-50 dark:bg-gray-700 p-6 rounded-xl shadow-lg">
             <h3 class="text-xl font-bold mb-3">🎬 Part 2: The Sleep</h3>
-            <video controls class="w-full rounded-lg shadow-lg" poster="/images/video-placeholder.jpg">
+            <video controls class="w-full rounded-lg shadow-lg bg-black">
               <source src="/videos/English/09bThe Sleeping Beauty.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
           </div>
 
-          <div class="bg-blue-50 dark:bg-gray-700 p-4 rounded-xl">
+          <div class="bg-gradient-to-r from-pink-50 to-red-50 dark:bg-gray-700 p-6 rounded-xl shadow-lg">
             <h3 class="text-xl font-bold mb-3">🎬 Part 3: The Awakening</h3>
-            <video controls class="w-full rounded-lg shadow-lg" poster="/images/video-placeholder.jpg">
+            <video controls class="w-full rounded-lg shadow-lg bg-black">
               <source src="/videos/English/09cThe Sleeping Beauty.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
           </div>
         </div>
 
-        <div class="mb-6">
-          <h2 class="text-2xl font-bold mb-4">✍️ Grammar: Adjectives of Quality</h2>
-          <p class="mb-4 text-lg"><strong>Adjectives</strong> that show the quality, kind or condition of a person or thing are called <span class="text-red-500 font-bold">Adjectives of Quality</span>. They are also called Descriptive Adjectives.</p>
+        <div class="my-8 bg-blue-50 dark:bg-gray-800 p-6 rounded-xl">
+          <h3 class="text-2xl font-bold mb-4">📖 The Story</h3>
+          <div class="space-y-4 text-base leading-relaxed">
+            <p>Long, long ago, there lived a king and a queen who longed for a baby. One day, when the queen was bathing in the lake, a frog jumped out of the water and said, "Before the end of this year, your wish to have a baby will be granted."</p>
+            
+            <p>A few days later the prediction of the frog came true and the Queen gave birth to a beautiful baby girl and she decided to have a grand christening ceremony. They have not only invited their relatives and friends, but also invited the twelve good fairies to be godmothers. However, there were thirteen fairies in the land, but the king had forgotten the thirteenth as she lived alone faraway in a castle and she was not invited. That proved a grave mistake for the King and Queen and they soon realized their mistake.</p>
+            
+            <p>The christening was held grandly and when it was almost over, the good fairies went up to the cradle and bestowed gifts on the baby. One gave her gift of virtue, another, beauty and another, wealth and the baby Princess had all the gifts. When the eleventh fairy had bestowed her gift, the thirteenth fairy came and said, "I am going to give her a gift which will never allow her to forget me." She shouted and wailed, "On her sixteenth birthday, the Princess will prick herself with a spindle and will die."</p>
+            
+            <p>All the members were dumbstruck but the twelfth fairy came and as she had the power to lift the wicked curse, she eased it saying, "Take comfort. The Princess won't die, but falls into deep sleep for hundred years when she pricks her finger on the spindle."</p>
+            
+            <p>The king ordered all the spindles to be banned and burnt as the hope that he would save his daughter from the magic spell of the thirteenth fairy. He regretted not inviting her to the christening.</p>
+            
+            <p>The years flew and the princess grew up to be kind and beautiful and was loved by all. On her sixteenth birthday her parents were away for part of the day. So the princess was alone for most of the day.</p>
+            
+            <p>She wandered all over the palace and had a look at all the places where she had never been before. Finally, she came to a winding staircase which led to a tower. She climbed up the staircase and reached a little door with a rusty key in the lock. When she turned it, the door opened and she found an old woman busily spinning flax on a spindle.</p>
+            
+            <p>The old woman greeted her and invited her. The princess asked her, "What are you doing?" The old woman replied, "I'm spinning yarn." The princess then asked, "What is that thing that is jumping up and down?". "That's a spindle," replied the old woman, "Will you try it?" The princess took the spindle and began to spin.</p>
+            
+            <p>As soon as she touched the spindle, she fell asleep. The whole palace along with her parents who have just arrived also fell asleep. There was not even the rustle of the dry leaf as everybody and everything have slept peacefully.</p>
+            
+            <p>A hedge of thorns grew up around the palace. Every year the hedge grew higher and thicker and eventually the flag on the palace roof could no longer be seen.</p>
+            
+            <p>The story of the sleeping beauty became a legend in that land. From time to time princes went to cut the thorns, but they failed in their attempts. So almost all of them gave up the idea of searching for the Sleeping Beauty.</p>
+            
+            <p>After a hundred years, a prince heard about the story of the Sleeping Beauty. He knew about the attempts of the other princes who have failed and he thought, "I want to go and find the lovely Sleeping Beauty for myself," saying so he rode to the hedge of thorns and a mysterious thing happened.</p>
+            
+            <p>When he was about to cut the wild hedge of thorns a path opened up, and the prince rode straight into the palace. The wild thorns closed up to form a hedge once more.</p>
+            
+            <p>The prince saw the horses, dogs, birds asleep. He looked around and saw the king and queen also fast asleep.</p>
+            
+            <p>Finally, he came to the tower and opened the door to the little room where the princess lay sleeping. She looked so beautiful that he bent down to kiss her on the lips. As his lips touched hers, the Sleeping Beauty awoke and fell in love with the prince at first sight.</p>
+            
+            <p>The rest of the palace awoke after their long sleep. It seemed as though time had stood still and those long, long years had never passed.</p>
+            
+            <p class="font-semibold">The spell was lifted at last and the darkest days were finished. Soon everyone enjoyed the magnificent Wedding Reception of Sleeping Beauty. The prince and the Sleeping Beauty lived happily thereafter. No one ever saw or heard about that troublesome thirteenth fairy.</p>
+          </div>
+        </div>
+
+        <div class="my-8 bg-yellow-50 dark:bg-gray-800 p-6 rounded-xl">
+          <h3 class="text-2xl font-bold mb-4">🎭 Listening & Speaking</h3>
+          <div class="bg-white dark:bg-gray-700 p-4 rounded-lg space-y-2">
+            <p><strong>Witch:</strong> The princess will never forget me in her life.</p>
+            <p><strong>Queen:</strong> Please forgive us. Do not bestow a curse on our princess.</p>
+            <p><strong>King:</strong> We beg for your pardon. Don't do it to our daughter.</p>
+            <p><strong>Witch:</strong> The princess in her sixteenth year will prick herself with a spindle and die.</p>
+          </div>
+        </div>
+
+        <div class="my-8 bg-green-50 dark:bg-gray-800 p-6 rounded-xl">
+          <h3 class="text-2xl font-bold mb-4">📚 Glossary</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div class="bg-white dark:bg-gray-700 p-3 rounded-lg"><strong>Predict:</strong> to tell in advance, foretell</div>
+            <div class="bg-white dark:bg-gray-700 p-3 rounded-lg"><strong>Christened:</strong> a ceremony conducted for naming a child</div>
+            <div class="bg-white dark:bg-gray-700 p-3 rounded-lg"><strong>Bestow:</strong> present</div>
+            <div class="bg-white dark:bg-gray-700 p-3 rounded-lg"><strong>Castle:</strong> palace</div>
+            <div class="bg-white dark:bg-gray-700 p-3 rounded-lg"><strong>Virtue:</strong> goodness</div>
+            <div class="bg-white dark:bg-gray-700 p-3 rounded-lg"><strong>Curse:</strong> evil, misfortune</div>
+            <div class="bg-white dark:bg-gray-700 p-3 rounded-lg"><strong>Prick:</strong> drive a sharp point into</div>
+            <div class="bg-white dark:bg-gray-700 p-3 rounded-lg"><strong>Hedge:</strong> a fence formed by bushes</div>
+            <div class="bg-white dark:bg-gray-700 p-3 rounded-lg"><strong>Wander:</strong> walk aimlessly</div>
+            <div class="bg-white dark:bg-gray-700 p-3 rounded-lg"><strong>Attempt:</strong> try</div>
+          </div>
+        </div>
+
+        <div class="my-8">
+          <h2 class="text-3xl font-bold mb-6">✍️ Grammar: Adjectives of Quality</h2>
+          <p class="mb-4 text-lg bg-blue-100 dark:bg-gray-700 p-4 rounded-lg"><strong>Adjectives</strong> that show the quality, kind or condition of a person or thing are called <span class="text-red-500 font-bold">Adjectives of Quality</span>. They are also called <span class="text-blue-600 dark:text-blue-400 font-bold">Descriptive Adjectives</span>.</p>
           
-          <div class="bg-yellow-50 dark:bg-gray-700 p-6 rounded-xl border border-yellow-200 dark:border-gray-600 mb-6">
-            <h3 class="text-xl font-bold mb-4 text-yellow-800 dark:text-yellow-300">🦁 Adjectives in the Animal World</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <p>• A <span class="text-red-500 font-bold">Lean</span> Hen 🐔</p>
-              <p>• A <span class="text-red-500 font-bold">Fat</span> Cat 🐱</p>
-              <p>• An <span class="text-red-500 font-bold">Old</span> Owl 🦉</p>
-              <p>• A <span class="text-red-500 font-bold">Young</span> Yak 🐂</p>
-              <p>• A <span class="text-red-500 font-bold">Tall</span> Giraffe 🦒</p>
-              <p>• A <span class="text-red-500 font-bold">White</span> Rabbit 🐇</p>
-              <p>• A <span class="text-red-500 font-bold">Pretty</span> Parrot 🦜</p>
-              <p>• An <span class="text-red-500 font-bold">Ugly</span> Eagle 🦅</p>
-              <p>• A <span class="text-red-500 font-bold">Small</span> Lion 🦁</p>
-              <p>• A <span class="text-red-500 font-bold">Clever</span> Fox 🦊</p>
+          <div class="bg-gradient-to-r from-yellow-50 to-orange-50 dark:bg-gray-700 p-6 rounded-xl border-2 border-yellow-300 dark:border-gray-600 mb-6">
+            <h3 class="text-2xl font-bold mb-4 text-yellow-800 dark:text-yellow-300">🦁 Adjectives in the Animal World</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+              <div class="bg-white dark:bg-gray-600 p-3 rounded-lg">A <span class="text-red-600 font-bold">Lean</span> Hen 🐔</div>
+              <div class="bg-white dark:bg-gray-600 p-3 rounded-lg">A <span class="text-red-600 font-bold">Fat</span> Cat 🐱</div>
+              <div class="bg-white dark:bg-gray-600 p-3 rounded-lg">An <span class="text-red-600 font-bold">Old</span> Owl 🦉</div>
+              <div class="bg-white dark:bg-gray-600 p-3 rounded-lg">A <span class="text-red-600 font-bold">Young</span> Yak 🐂</div>
+              <div class="bg-white dark:bg-gray-600 p-3 rounded-lg">A <span class="text-red-600 font-bold">Tall</span> Giraffe 🦒</div>
+              <div class="bg-white dark:bg-gray-600 p-3 rounded-lg">A <span class="text-red-600 font-bold">White</span> Rabbit 🐇</div>
+              <div class="bg-white dark:bg-gray-600 p-3 rounded-lg">A <span class="text-red-600 font-bold">Pretty</span> Parrot 🦜</div>
+              <div class="bg-white dark:bg-gray-600 p-3 rounded-lg">An <span class="text-red-600 font-bold">Ugly</span> Eagle 🦅</div>
+              <div class="bg-white dark:bg-gray-600 p-3 rounded-lg">A <span class="text-red-600 font-bold">Dirty</span> Dog 🐕</div>
+              <div class="bg-white dark:bg-gray-600 p-3 rounded-lg">A <span class="text-red-600 font-bold">Neat</span> Dove 🕊️</div>
+              <div class="bg-white dark:bg-gray-600 p-3 rounded-lg">A <span class="text-red-600 font-bold">Big</span> Pig 🐷</div>
+              <div class="bg-white dark:bg-gray-600 p-3 rounded-lg">A <span class="text-red-600 font-bold">Small</span> Lion 🦁</div>
+              <div class="bg-white dark:bg-gray-600 p-3 rounded-lg">A <span class="text-red-600 font-bold">Clever</span> Fox 🦊</div>
+              <div class="bg-white dark:bg-gray-600 p-3 rounded-lg">A <span class="text-red-600 font-bold">Foolish</span> Camel 🐫</div>
             </div>
           </div>
 
-          <div class="bg-green-50 dark:bg-gray-700 p-6 rounded-xl border border-green-200 dark:border-gray-600">
-            <h3 class="text-xl font-bold mb-4 text-green-800 dark:text-green-300">📝 More Examples</h3>
-            <ul class="space-y-3">
-              <li>• Mumbai is a <span class="text-red-500 font-bold">large</span> city.</li>
-              <li>• I ate some <span class="text-red-500 font-bold">ripe</span> mangoes and <span class="text-red-500 font-bold">seedless</span> grapes.</li>
-              <li>• The child has a <span class="text-red-500 font-bold">smiling</span> face.</li>
-              <li>• They lived in a <span class="text-red-500 font-bold">big red</span> house.</li>
-              <li>• Mr. Ramesh is a <span class="text-red-500 font-bold">kind</span> man.</li>
-              <li>• The camel is a very <span class="text-red-500 font-bold">useful</span> animal.</li>
-              <li>• The dog is a <span class="text-red-500 font-bold">faithful</span> one.</li>
+          <div class="bg-gradient-to-r from-green-50 to-teal-50 dark:bg-gray-700 p-6 rounded-xl border-2 border-green-300 dark:border-gray-600 mb-6">
+            <h3 class="text-2xl font-bold mb-4 text-green-800 dark:text-green-300">📝 More Examples</h3>
+            <ul class="space-y-2">
+              <li class="bg-white dark:bg-gray-600 p-3 rounded-lg">Mumbai is a <span class="text-red-600 font-bold">large</span> city.</li>
+              <li class="bg-white dark:bg-gray-600 p-3 rounded-lg">I ate some <span class="text-red-600 font-bold">ripe</span> mangoes and <span class="text-red-600 font-bold">seedless</span> grapes.</li>
+              <li class="bg-white dark:bg-gray-600 p-3 rounded-lg">The child has a <span class="text-red-600 font-bold">smiling</span> face.</li>
+              <li class="bg-white dark:bg-gray-600 p-3 rounded-lg">They lived in a <span class="text-red-600 font-bold">big red</span> house.</li>
+              <li class="bg-white dark:bg-gray-600 p-3 rounded-lg">Mr. Ramesh is a <span class="text-red-600 font-bold">kind</span> man.</li>
+              <li class="bg-white dark:bg-gray-600 p-3 rounded-lg">The camel is a very <span class="text-red-600 font-bold">useful</span> animal.</li>
+              <li class="bg-white dark:bg-gray-600 p-3 rounded-lg">The dog is a <span class="text-red-600 font-bold">faithful</span> one.</li>
+              <li class="bg-white dark:bg-gray-600 p-3 rounded-lg">These <span class="text-red-600 font-bold">small</span> apples have a <span class="text-red-600 font-bold">sweet</span> taste.</li>
+              <li class="bg-white dark:bg-gray-600 p-3 rounded-lg">Mr. Suman bought a <span class="text-red-600 font-bold">new</span> car.</li>
+              <li class="bg-white dark:bg-gray-600 p-3 rounded-lg">We have <span class="text-red-600 font-bold">warm</span> weather in Summer.</li>
             </ul>
+            <p class="mt-4 p-3 bg-yellow-100 dark:bg-gray-600 rounded-lg font-semibold">📌 NOTE: Adjectives of quality always answer the question, "Of what kind?"</p>
+          </div>
+        </div>
+
+        <div class="my-8 bg-purple-50 dark:bg-gray-800 p-6 rounded-xl">
+          <h3 class="text-2xl font-bold mb-4">❓ Comprehension Questions</h3>
+          <ol class="space-y-3 list-decimal list-inside">
+            <li class="bg-white dark:bg-gray-700 p-3 rounded-lg">What did the frog tell the queen?</li>
+            <li class="bg-white dark:bg-gray-700 p-3 rounded-lg">What is the mistake committed by the king and queen?</li>
+            <li class="bg-white dark:bg-gray-700 p-3 rounded-lg">What is the curse given by the thirteenth fairy?</li>
+            <li class="bg-white dark:bg-gray-700 p-3 rounded-lg">What happened on the princess' sixteenth birthday?</li>
+            <li class="bg-white dark:bg-gray-700 p-3 rounded-lg">At last, who had woken up the princess?</li>
+          </ol>
+        </div>
+
+        <div class="my-8 bg-orange-50 dark:bg-gray-800 p-6 rounded-xl">
+          <h3 class="text-2xl font-bold mb-4">🎨 Vocabulary Exercises</h3>
+          
+          <div class="mb-6">
+            <h4 class="text-xl font-bold mb-3">Watch & Match</h4>
+            <p class="mb-2 text-sm text-gray-600 dark:text-gray-400">Match the words that go together:</p>
+            <div class="grid grid-cols-2 gap-3">
+              <div class="bg-white dark:bg-gray-700 p-3 rounded-lg">1. big → building</div>
+              <div class="bg-white dark:bg-gray-700 p-3 rounded-lg">2. wise → owl</div>
+              <div class="bg-white dark:bg-gray-700 p-3 rounded-lg">3. strong → elephant</div>
+              <div class="bg-white dark:bg-gray-700 p-3 rounded-lg">4. ugly → Solomon</div>
+              <div class="bg-white dark:bg-gray-700 p-3 rounded-lg">5. healthy → cow</div>
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <h4 class="text-xl font-bold mb-3">Fill & Drill</h4>
+            <p class="mb-2 text-sm text-gray-600 dark:text-gray-400">Fill in the blanks with Adjectives of Quality:</p>
+            <ol class="space-y-2 list-decimal list-inside">
+              <li class="bg-white dark:bg-gray-700 p-3 rounded-lg">He is an ________ man. (honest)</li>
+              <li class="bg-white dark:bg-gray-700 p-3 rounded-lg">The child fell down from a ________ tree. (tall)</li>
+              <li class="bg-white dark:bg-gray-700 p-3 rounded-lg">Swimming is a ________ exercise. (good)</li>
+              <li class="bg-white dark:bg-gray-700 p-3 rounded-lg">The elephant is a ________ animal. (big)</li>
+              <li class="bg-white dark:bg-gray-700 p-3 rounded-lg">Ram is an ________ boy. (intelligent)</li>
+            </ol>
+          </div>
+
+          <div>
+            <h4 class="text-xl font-bold mb-3">Pick & Tick</h4>
+            <p class="mb-2 text-sm text-gray-600 dark:text-gray-400">Pick out the Adjectives of Quality:</p>
+            <ol class="space-y-2 list-decimal list-inside">
+              <li class="bg-white dark:bg-gray-700 p-3 rounded-lg">The thirteenth fairy was a <span class="text-red-600 font-bold">wicked</span> woman.</li>
+              <li class="bg-white dark:bg-gray-700 p-3 rounded-lg">Chocolates are very <span class="text-red-600 font-bold">sweet</span>.</li>
+              <li class="bg-white dark:bg-gray-700 p-3 rounded-lg">The <span class="text-red-600 font-bold">greedy</span> man killed the <span class="text-red-600 font-bold">golden</span> hen for money.</li>
+              <li class="bg-white dark:bg-gray-700 p-3 rounded-lg">Chennai is a <span class="text-red-600 font-bold">large</span> city.</li>
+              <li class="bg-white dark:bg-gray-700 p-3 rounded-lg">The prince was very <span class="text-red-600 font-bold">handsome</span>.</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="my-8 bg-pink-50 dark:bg-gray-800 p-6 rounded-xl">
+          <h3 class="text-2xl font-bold mb-4">🎨 Fun Time - Become An Artist!</h3>
+          <p class="mb-4">Show the following Descriptive Adjectives by drawing pictures:</p>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-white dark:bg-gray-700 p-4 rounded-lg text-center">
+              <div class="text-4xl mb-2">🐱</div>
+              <p>A fat cat</p>
+            </div>
+            <div class="bg-white dark:bg-gray-700 p-4 rounded-lg text-center">
+              <div class="text-4xl mb-2">😊</div>
+              <p>A smiling face</p>
+            </div>
+            <div class="bg-white dark:bg-gray-700 p-4 rounded-lg text-center">
+              <div class="text-4xl mb-2">🥚</div>
+              <p>A broken egg</p>
+            </div>
+            <div class="bg-white dark:bg-gray-700 p-4 rounded-lg text-center">
+              <div class="text-4xl mb-2">🚲</div>
+              <p>A small bicycle</p>
+            </div>
           </div>
         </div>
       `,
