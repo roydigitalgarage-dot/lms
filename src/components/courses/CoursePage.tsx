@@ -16,7 +16,7 @@ export default function CoursePage() {
     const timer = setTimeout(() => {
       setLoading(false);
     }, 100);
-    
+
     return () => clearTimeout(timer);
   }, [courseId]);
 
@@ -75,16 +75,16 @@ export default function CoursePage() {
     'social-studies': { name: 'Social Studies', emoji: '🌍', color: 'from-yellow-400 to-orange-500' },
     evs: { name: 'EVS', emoji: '🌱', color: 'from-green-400 to-teal-500' }
   };
-  
+
   const subject = subjectData[courseId as keyof typeof subjectData] || {
     name: courseId ? courseId.charAt(0).toUpperCase() + courseId.slice(1) : 'Course',
     emoji: '📚',
     color: 'from-blue-400 to-purple-500'
   };
-  
+
   // Check if this is a children's course
   const isChildrensCourse = courseId === '2' || (user?.role === 'student' && courseId === 'children');
-  
+
   if (isChildrensCourse) {
     return <ChildrenCoursePage />;
   }
@@ -123,7 +123,8 @@ export default function CoursePage() {
         4: '/videos/Hindi/माँ कविता कक्षा दो _ Maa Poem Hindi CLASS 2 _ NCERT NEW BOOK _ Maa Tum Kitni Bholi Bhali Hindi poem.mp4'
       },
       'english': {
-        1: '/videos/English/Class 2 English (Mridang) - Syllabus Overview.mp4'
+        1: '/videos/English/Class 2 English (Mridang) - Syllabus Overview.mp4',
+        9: '/videos/English/09aThe Sleeping Beauty.mp4' // Part 1: The Curse (other parts embedded in lesson content)
       },
       'maths': {
         1: '/videos/Mathematics/videoplayback.mp4'
@@ -147,7 +148,7 @@ export default function CoursePage() {
         4: '/videos/4th unit.mp4'
       }
     };
-    
+
     return videoMap[courseId]?.[unitNumber] || null;
   };
 
@@ -167,6 +168,23 @@ export default function CoursePage() {
       ];
       return evsUnits[unitId - 1] || `Unit ${unitId}`;
     }
+
+    if (courseId === 'english') {
+      const englishUnits = [
+        'The Magic Garden',
+        'The Little Fir Tree',
+        'The Selfish Giant',
+        'The Treasure Within',
+        'Princess September',
+        'The Fight',
+        'The Open Window',
+        'Jalebis',
+        'The Sleeping Beauty',
+        'The Comet'
+      ];
+      return englishUnits[unitId - 1] || `Unit ${unitId}`;
+    }
+
     return `Unit ${unitId}`;
   };
 
