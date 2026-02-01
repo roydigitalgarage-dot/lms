@@ -62,8 +62,9 @@ export const mockData = {
               width="100%" 
               height="480"
               allow="autoplay"
-              className="rounded-lg shadow-lg border-0"
+              class="rounded-lg shadow-lg"
               style="border: none;"
+              frameborder="0"
             ></iframe>
           </div>
 
@@ -74,8 +75,9 @@ export const mockData = {
               width="100%" 
               height="480"
               allow="autoplay"
-              className="rounded-lg shadow-lg border-0"
+              class="rounded-lg shadow-lg"
               style="border: none;"
+              frameborder="0"
             ></iframe>
           </div>
 
@@ -86,8 +88,9 @@ export const mockData = {
               width="100%" 
               height="480"
               allow="autoplay"
-              className="rounded-lg shadow-lg border-0"
+              class="rounded-lg shadow-lg"
               style="border: none;"
+              frameborder="0"
             ></iframe>
           </div>
         </div>
