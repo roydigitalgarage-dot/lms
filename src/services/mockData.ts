@@ -57,26 +57,38 @@ export const mockData = {
         <div class="space-y-6 my-8">
           <div class="bg-gradient-to-r from-blue-50 to-purple-50 dark:bg-gray-700 p-6 rounded-xl shadow-lg">
             <h3 class="text-xl font-bold mb-3">🎬 Part 1: The Curse</h3>
-            <video controls class="w-full rounded-lg shadow-lg bg-black">
-              <source src="/videos/English/09aThe Sleeping Beauty.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
+            <iframe 
+              src="https://drive.google.com/file/d/1LbCw177n3Z3vPwMZGWKSloS5fe6lUHKF/preview" 
+              width="100%" 
+              height="480"
+              allow="autoplay"
+              className="rounded-lg shadow-lg border-0"
+              style="border: none;"
+            ></iframe>
           </div>
 
           <div class="bg-gradient-to-r from-purple-50 to-pink-50 dark:bg-gray-700 p-6 rounded-xl shadow-lg">
             <h3 class="text-xl font-bold mb-3">🎬 Part 2: The Sleep</h3>
-            <video controls class="w-full rounded-lg shadow-lg bg-black">
-              <source src="/videos/English/09bThe Sleeping Beauty.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
+            <iframe 
+              src="https://drive.google.com/file/d/1KiURuCTlqFZ3eYUc9Nu7rgelaFeYjx-n/preview" 
+              width="100%" 
+              height="480"
+              allow="autoplay"
+              className="rounded-lg shadow-lg border-0"
+              style="border: none;"
+            ></iframe>
           </div>
 
           <div class="bg-gradient-to-r from-pink-50 to-red-50 dark:bg-gray-700 p-6 rounded-xl shadow-lg">
             <h3 class="text-xl font-bold mb-3">🎬 Part 3: The Awakening</h3>
-            <video controls class="w-full rounded-lg shadow-lg bg-black">
-              <source src="/videos/English/09cThe Sleeping Beauty.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
+            <iframe 
+              src="https://drive.google.com/file/d/1UNEhP-gjVqFt7cBqAT4h5IcvfQ_657zN/preview" 
+              width="100%" 
+              height="480"
+              allow="autoplay"
+              className="rounded-lg shadow-lg border-0"
+              style="border: none;"
+            ></iframe>
           </div>
         </div>
 
